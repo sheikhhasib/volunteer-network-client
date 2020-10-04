@@ -1,0 +1,7 @@
+.Bg-image{
+    background-image:url("../logos/background.jpg");
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    width:100%;
+   
+}
