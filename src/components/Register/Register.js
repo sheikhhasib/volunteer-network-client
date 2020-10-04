@@ -13,7 +13,7 @@ const Register = (props) => {
     const location = useLocation();
     const onSubmit = data => {
         console.log(data)
-        fetch('http://localhost:5000/addDonetions', {
+        fetch('https://floating-hamlet-18259.herokuapp.com/addDonetions', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

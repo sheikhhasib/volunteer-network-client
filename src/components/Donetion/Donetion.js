@@ -12,7 +12,7 @@ const Donetion = () => {
     const [volunteers, setVolunteers] = useState([]);
     const [Id, seId] = useState();
     useEffect(() => {
-        fetch('http://localhost:5000/allDonetions?email='+loggedInUser.email,{
+        fetch('https://floating-hamlet-18259.herokuapp.com/allDonetions?email='+loggedInUser.email,{
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${sessionStorage.getItem('token')}`,
@@ -35,7 +35,7 @@ const Donetion = () => {
 
     const handleDelete = (id) => {
         console.log(id);
-        fetch(`http://localhost:5000/donetionDelete/${id}`, {
+        fetch(`https://floating-hamlet-18259.herokuapp.com/donetionDelete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
