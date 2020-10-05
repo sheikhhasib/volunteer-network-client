@@ -1,19 +1,27 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Button, Card, CardGroup, Form, FormControl } from 'react-bootstrap';
-import fakedata from '../../fakedata/FakeData';
 import Header from '../Headers/Header';
-import './AllVolunteer.css';
+import './AllTask.css';
 import Columns from 'react-columns';
 import { useForm } from "react-hook-form";
 import { Redirect, useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../App';
 
 const AllVolunteer = (props) => {
-    const setSingleVolunteer =props.setSingleVolunteer;
-    const [volunteers, setVolunteers] = useState(fakedata);
     const { handleSubmit, register } = useForm();
     const history = useHistory();
     const location = useLocation();
+    const setSingleVolunteer =props.setSingleVolunteer;
+    const [volunteers, setVolunteers] = useState([]);
+
+    useEffect(() => {
+        fetch('https://floating-hamlet-18259.herokuapp.com/alltask')
+        .then(res => res.json())
+        .then(data => {
+            setVolunteers(data);
+        })
+    },[])
+    
     const onSubmit = data => {
         const findVolunteer = volunteers.find(vt => vt.name === data);
         console.log(findVolunteer);

@@ -25,7 +25,8 @@ const Headers = () => {
                             <Nav.Link href="#home" className="mx-4"><strong className="text-dark">Events</strong></Nav.Link>
                             <Nav.Link href="#home" className="mx-4"><strong className="text-dark">Blog</strong></Nav.Link>
                             <Link to="/register"><Button variant="primary" className="ml-4 px-4">Register</Button></Link>
-                            <Button variant="dark" className="ml-2 px-4">Admin</Button>
+                            <Link to="/userList"><Button variant="dark" className="ml-2 px-4">Admin</Button></Link>
+                            
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

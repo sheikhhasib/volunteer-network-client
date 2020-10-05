@@ -20,99 +20,118 @@ import schoolSuffiles from './images/schoolSuffiles.png';
 
 const fakedata = [
     {
-        id: '1',
         name: 'Child Suppor',
+        description: '',
         image: childSupport,
+        date: ''
     },
     {
-        id: '2',
         name: 'Refuge Shelter',
+        description: '',
         image: refuseShelter,
+        date: ''
     },
     {
-        id: '3',
         name: 'Food Charity',
+        description: '',
         image: foodCharity,
+        date: ''
     },
     {
-        id: '4',
         name: 'Host a clothing swap',
+        description: '',
         image: clothSwap,
+        date: ''
     },
     {
-        id: '5',
         name: 'Host a river clean-up',
-        image: riverClean
+        description: '',
+        image: riverClean,
+        date: ''
     },
     {
-        id: '6',
         name: 'Clean water for children',
-        image: cleanWater
+        description: '',
+        image: cleanWater,
+        date: ''
     },
     {
-        id: '7',
         name: 'Good education',
-        image: goodEducation
+        description: '',
+        image: goodEducation,
+        date: ''
     },
     {
-        id: '8',
         name: 'New books for children',
-        image: newBooks
+        description: '',
+        image: newBooks,
+        date: ''
     },
     {
-        id: '9',
         name: 'Host a study group',
-        image: studyGroup
+        description: '',
+        image: studyGroup,
+        date: ''
     },
     {
-        id: '10',
         name: 'Build birdhouses for your neighbors',
-        image: birdHouse
+        description: '',
+        image: birdHouse,
+        date: ''
     },
     {
-        id: '11',
         name: 'Organize books at the libary',
-        image: libraryBooks
+        description: '',
+        image: libraryBooks,
+        date: ''
     },
     {
-        id: '12',
         name: 'Give a seminar on  driving safety',
-        image: driveSafety
+        description: '',
+        image: driveSafety,
+        date: ''
     },
     {
-        id: '13',
         name: 'Teach people how to register to vote',
-        image: voteRegister
+        description: '',
+        image: voteRegister,
+        date: ''
     },
     {
-        id: '14',
         name: 'Clean up your local park',
-        image: clearnPark
+        description: '',
+        image: clearnPark,
+        date: ''
     },
     {
-        id: '15',
         name: 'Give IT help to local adults',
-        image: ITHelp
+        description: '',
+        image: ITHelp,
+        date: ''
     },
     {
-        id: '16',
         name: 'foster a shelter animal.',
-        image: animalShelter
+        description: '',
+        image: animalShelter,
+        date: ''
     },
     {
-        id: '17',
         name: 'Babysit during PTA meetings.',
-        image: babySit
+        description: '',
+        image: babySit,
+        date: ''
     },
     {
-        id: '18',
         name: 'Collect stuffed animals.',
-        image: stuffedAnimals
+        description: '',
+        image: stuffedAnimals,
+        date: ''
     },
     {
-        id: '19',
         name: 'Collect school supplies.',
-        image: schoolSuffiles
+        description: '',
+        image: schoolSuffiles,
+        date: ''
     },
 ]
 

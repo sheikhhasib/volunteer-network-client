@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Button, Card, CardGroup, Nav, Navbar } from 'react-bootstrap';
+import { Button, Card, CardGroup, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../logos/logo.png'
 import './Donetion.css'
 import Columns from 'react-columns';
 import { UserContext } from '../../App';
+
 
 const Donetion = () => {
 
@@ -12,19 +13,18 @@ const Donetion = () => {
     const [volunteers, setVolunteers] = useState([]);
     const [Id, seId] = useState();
     useEffect(() => {
-        fetch('https://floating-hamlet-18259.herokuapp.com/allDonetions?email='+loggedInUser.email,{
+        fetch('https://floating-hamlet-18259.herokuapp.com/allDonetions?email=' +loggedInUser.email, {
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${sessionStorage.getItem('token')}`,
-                'Content-Type': 'application/json', 
+                'Content-Type': 'application/json',
             }
         })
-            .then(res => res.json())
-            .then(data => {
-                setVolunteers(data)
-                // console.log(data.image);
-            })
-    },[Id])
+        .then(res => res.json())
+        .then(data => {
+            setVolunteers(data)
+        })
+    }, [Id])
     var queries = [{
         columns: 2,
         query: 'min-width: 500px'
@@ -43,8 +43,6 @@ const Donetion = () => {
                 seId(result);
             })
     }
-
-
 
     const volunteer = volunteers.map(vl => {
         const { _id, volunteerName, image, date } = vl;
@@ -88,6 +86,9 @@ const Donetion = () => {
                             </Link>
                             <Nav.Link href="#home" className="mx-4"><strong className="text-dark">Events</strong></Nav.Link>
                             <Nav.Link href="#home" className="mx-4"><strong className="text-dark">Blog</strong></Nav.Link>
+                            <NavDropdown title={loggedInUser ? loggedInUser.name : ''} id="nav-dropdown">
+                                <NavDropdown.Item eventKey="4.2"><Link to="/userList" className="text-decoration-none text-dark">User list</Link></NavDropdown.Item>
+                            </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
