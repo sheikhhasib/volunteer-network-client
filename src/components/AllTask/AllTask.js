@@ -37,7 +37,7 @@ const AllVolunteer = (props) => {
         setSingleVolunteer(volunteer);
         history.replace('/register');
     }
-    const colors = ['#ffbd3e', '#FF7044', '#3F90FC', '#421FCF', '#3F90FC', '#421FCF', '#FF7044', '#ffbd3e', '#ffbd3e', '#FF7044', '#3F90FC', '#421FCF', '#3F90FC', '#421FCF', '#3F90FC', '#ffbd3e', '#ffbd3e', '#FF7044', '#3F90FC', '#421FCF', '#FF7044']
+    const colors = ['#ffbd3e', '#FF7044', '#3F90FC', '#421FCF', '#3F90FC', '#421FCF', '#FF7044', '#ffbd3e', '#ffbd3e', '#FF7044', '#ffbd3e', '#FF7044', '#3F90FC', '#421FCF','#3F90FC', '#3F90FC', '#421FCF', '#FF7044', '#ffbd3e','#421FCF', '#3F90FC', '#421FCF', '#3F90FC', '#ffbd3e', '#ffbd3e', '#FF7044', '#3F90FC', '#421FCF', '#FF7044']
     for (let i = 0; i < volunteers.length; i++) {
         const vlColor = volunteers[i];
         vlColor.color = colors[i];
